@@ -68,7 +68,9 @@ class RegisterScreenForm extends StatelessWidget {
           ScaffoldMessenger.of(context)
             ..hideCurrentSnackBar()
             ..showSnackBar(
-              const SnackBar(content: Text('Authentication Failure')),
+              SnackBar(
+                  content: Text(
+                      AppLocalizations.of(context)!.authenticationFailure)),
             );
         }
       },
@@ -90,14 +92,16 @@ class RegisterScreenForm extends StatelessWidget {
               text: 'Terms of Service',
               style: TextStyle(decoration: TextDecoration.underline),
               recognizer: new TapGestureRecognizer()
-                ..onTap = () => print('Tap Here onTap'),
+                ..onTap = () => SnackBar(
+                    content: Text(AppLocalizations.of(context)!.helloWorld)),
             ),
             new TextSpan(text: ' and '),
             new TextSpan(
               text: 'Privacy Policy',
               style: TextStyle(decoration: TextDecoration.underline),
               recognizer: new TapGestureRecognizer()
-                ..onTap = () => print('Tap Here onTap'),
+                ..onTap = () => SnackBar(
+                    content: Text(AppLocalizations.of(context)!.helloWorld)),
             ),
             new TextSpan(text: '.'),
           ]))
@@ -140,11 +144,13 @@ class RegisterScreenForm extends StatelessWidget {
               .read<RegisterBloc>()
               .add(RegisterPasswordChanged(password)),
           decoration: InputDecoration(
-            hintText: "Password",
+            hintText: AppLocalizations.of(context)!.password,
             enabledBorder: AppTextFieldStyle.outlineInputBorder,
             focusedBorder: AppTextFieldStyle.outlineInputBorder,
             border: AppTextFieldStyle.outlineInputBorder,
-            errorText: state.password.invalid ? 'invalid password' : null,
+            errorText: state.password.invalid
+                ? AppLocalizations.of(context)!.invalidPassword
+                : null,
           ),
           obscureText: true,
         );
@@ -163,12 +169,12 @@ class RegisterScreenForm extends StatelessWidget {
               .read<RegisterBloc>()
               .add(RegisterPasswordChanged(password)),
           decoration: InputDecoration(
-            hintText: "Confirm Password",
+            hintText: AppLocalizations.of(context)!.confirmPassword,
             enabledBorder: AppTextFieldStyle.outlineInputBorder,
             focusedBorder: AppTextFieldStyle.outlineInputBorder,
             border: AppTextFieldStyle.outlineInputBorder,
             errorText: state.passwordConfirm.invalid
-                ? 'invalid password confirm'
+                ? AppLocalizations.of(context)!.invalidPasswordConfirm
                 : null,
           ),
           obscureText: true,

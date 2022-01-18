@@ -96,11 +96,13 @@ class LoginScreenForm extends StatelessWidget {
             onChanged: (username) =>
                 context.read<LoginBloc>().add(LoginUsernameChanged(username)),
             decoration: InputDecoration(
-              hintText: "Username",
+              hintText: AppLocalizations.of(context)!.username,
               enabledBorder: AppTextFieldStyle.outlineInputBorder,
               focusedBorder: AppTextFieldStyle.outlineInputBorder,
               border: AppTextFieldStyle.outlineInputBorder,
-              errorText: state.username.invalid ? 'invalid username' : null,
+              errorText: state.username.invalid
+                  ? AppLocalizations.of(context)!.invalidUsername
+                  : null,
             ),
           ),
         );
@@ -117,11 +119,13 @@ class LoginScreenForm extends StatelessWidget {
           onChanged: (password) =>
               context.read<LoginBloc>().add(LoginPasswordChanged(password)),
           decoration: InputDecoration(
-            hintText: "Password",
+            hintText: AppLocalizations.of(context)!.password,
             enabledBorder: AppTextFieldStyle.outlineInputBorder,
             focusedBorder: AppTextFieldStyle.outlineInputBorder,
             border: AppTextFieldStyle.outlineInputBorder,
-            errorText: state.password.invalid ? 'invalid password' : null,
+            errorText: state.password.invalid
+                ? AppLocalizations.of(context)!.invalidPassword
+                : null,
           ),
           obscureText: true,
         );

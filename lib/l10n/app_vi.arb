@@ -1,5 +1,16 @@
 {
   "helloWorld": "Xin chào!",
   "login": "Đăng nhập",
-  "register": "Đăng ký"
+  "register": "Đăng ký",
+  "whatNew" : "CÓ GÌ MỚI HÔM NAY",
+  "username" : "Username",
+  "password" : "Mật khẩu",
+  "invalidPassword" : "mật khẩu không hợp lệ",
+  "invalidUsername" : "username không hợp lệ",
+  "discover" : "Khám phá",
+  "browseAll" : "DUYỆT TẤT CẢ",
+  "seeMore" : "xem thêm",
+  "authenticationFailure" : "Xác thực người dùng thất bại",
+  "confirmPassword" : "Nhập lại password",
+  "invalidPasswordConfirm" : "password nhập lại không hợp lệ"
 }

@@ -1,5 +1,17 @@
 {
   "helloWorld": "Hello World!",
   "login": "Log in",
-  "register": "Register"
+  "register": "Register",
+  "whatNew" : "WHAT'S NEW TODAY",
+  "username" : "Username",
+  "password" : "Password",
+  "invalidPassword" : "invalid password",
+  "invalidUsername" : "invalid username",
+  "discover" : "Discover",
+  "browseAll" : "BROWSE ALL",
+  "seeMore" : "see more",
+
+  "authenticationFailure" : "Authentication Failure",
+  "confirmPassword" : "Confirm Password",
+  "invalidPasswordConfirm" : "invalid password confirm"
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:masonry_grid/masonry_grid.dart';
 import 'package:me_car_interview_test/utils/constants.dart';
 import 'package:me_car_interview_test/views/widgets/app_secondary_button.dart';
@@ -25,9 +26,9 @@ class HomeScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  AppTextH1("Discover"),
+                  AppTextH1(AppLocalizations.of(context)!.discover),
                   SizedBox(height: 32),
-                  AppTextH2("WHAT'S NEW TODAY"),
+                  AppTextH2(AppLocalizations.of(context)!.whatNew),
                   SizedBox(height: 24),
                   Image.asset("assets/image_what_new.png"),
                   SizedBox(height: 16),
@@ -37,7 +38,7 @@ class HomeScreen extends StatelessWidget {
                     userId: "@ridzjcob",
                   ),
                   SizedBox(height: 48),
-                  AppTextH2("BROWSE ALL"),
+                  AppTextH2(AppLocalizations.of(context)!.browseAll),
                   SizedBox(height: 32),
                   CustomScrollView(
                     shrinkWrap: true,
@@ -64,7 +65,8 @@ class HomeScreen extends StatelessWidget {
                             child: SizedBox(
                           height: Constant.buttonHeight,
                           child: AppSecondaryButton(
-                              text: "see more", onPressed: () {}),
+                              text: AppLocalizations.of(context)!.seeMore,
+                              onPressed: () {}),
                         )),
                       ],
                     ),
